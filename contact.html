@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Start Your Project with EB Suite</title>
+  <meta name="description" content="Get in touch with EB Suite to start your next digital project. We respond within 24 hours.">
+  <link rel="canonical" href="https://eb-suite.github.io/github-web/contact.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#ffd950"/><path d="M8 8h4.8L20 20h-4.8L8 8zM20 20h4.8L8 8h-4.8L20 20z" fill="#000"/></svg>
+      EB <span>Suite</span>
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active nav__cta">Contact</a></li>
+    </ul>
+    <div class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="page-header__content">
+      <div class="section__label">Get in Touch</div>
+      <h1 class="page-header__title">Let's start a conversation.</h1>
+      <p class="page-header__desc">
+        Tell us about your project. We typically respond within 24 hours.
+      </p>
+    </div>
+  </header>
+
+  <section class="section section--dark" style="padding-top: 0;">
+    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;">
+
+      <div>
+        <h2 class="section__title" style="font-size: 1.5rem; margin-bottom: 2rem;">Contact info</h2>
+        <div class="services-grid" style="grid-template-columns: 1fr;">
+          <div class="service-card">
+            <div class="service-card__icon">📧</div>
+            <div class="service-card__title">Email</div>
+            <div class="service-card__desc"><a href="mailto:hello@eb-suite.com" style="color: var(--accent); text-decoration: none;">hello@eb-suite.com</a></div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">📞</div>
+            <div class="service-card__title">Phone</div>
+            <div class="service-card__desc"><a href="tel:+85231051839" style="color: var(--accent); text-decoration: none;">+852 3105 1839</a></div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">💬</div>
+            <div class="service-card__title">WhatsApp</div>
+            <div class="service-card__desc"><a href="https://wa.me/85231051839" target="_blank" style="color: var(--accent); text-decoration: none;">+852 3105 1839</a></div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">📍</div>
+            <div class="service-card__title">Address</div>
+            <div class="service-card__desc">Hong Kong SAR</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section__title" style="font-size: 1.5rem; margin-bottom: 2rem;">Send us a message</h2>
+        <form class="contact-form" action="#" method="post" onsubmit="handleSubmit(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="branding">Branding & Identity</option>
+              <option value="web">Web Design & Development</option>
+              <option value="mobile">Mobile App Development</option>
+              <option value="ecommerce">eCommerce & mCommerce</option>
+              <option value="marketing">Digital Marketing</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select a range...</option>
+              <option value="5k-15k">$5,000 – $15,000</option>
+              <option value="15k-50k">$15,000 – $50,000</option>
+              <option value="50k-100k">$50,000 – $100,000</option>
+              <option value="100k+">$100,000+</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: fit-content;">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#ffd950"/><path d="M8 8h4.8L20 20h-4.8L8 8zM20 20h4.8L8 8h-4.8L20 20z" fill="#000"/></svg>
+          EB <span>Suite</span>
+        </a>
+        <p class="footer__brand-desc">Full-Stack Digital Studio based in Hong Kong. We blend technology with creativity to deliver exceptional digital experiences.</p>
+      </div>
+      <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Services</h4><ul><li><a href="services.html">Branding</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Mobile Apps</a></li><li><a href="services.html">eCommerce</a></li><li><a href="services.html">Digital Marketing</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="mailto:hello@eb-suite.com">hello@eb-suite.com</a></li><li><a href="tel:+85231051839">+852 3105 1839</a></li><li><a href="https://github.com/eb-suite" target="_blank">GitHub</a></li><li><a href="https://linkedin.com/company/eb-suite" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; 2024 EB Suite Limited. All rights reserved.</span><span>Hong Kong · since 2014</span></div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav__links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('navToggle').classList.remove('active');
+      });
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = '#22c55e';
+      setTimeout(function() {
+        btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        btn.style.background = '';
+        form.reset();
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
